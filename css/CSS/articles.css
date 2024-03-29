@@ -1,0 +1,135 @@
+.articles,
+.gallery,
+.features {
+  padding-top: 100px;
+}
+.articles .container,
+.gallery .container,
+.features .container {
+  margin-top: 60px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.main-title {
+  text-align: center;
+  display: block;
+  padding: 10px 15px;
+  width: fit-content;
+  margin: auto;
+  border: 2px solid black;
+  font-size: 30px;
+  text-transform: uppercase;
+  position: relative;
+  transition: var(--main-transition);
+  z-index: 10;
+}
+
+.main-title:hover {
+  border: 2px solid white;
+  color: white;
+  transition-delay: 0.5s;
+}
+
+.main-title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.main-title:hover::before {
+  animation: left-dot 0.5s linear forwards;
+}
+
+.main-title:hover::after {
+  animation: right-dot 0.5s linear forwards;
+}
+
+@keyframes left-dot {
+  100% {
+    left: 0;
+    border-radius: 0px;
+    width: calc(50% + 1px);
+    height: 100%;
+  }
+}
+
+@keyframes right-dot {
+  100% {
+    right: 0;
+    border-radius: 0px;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  overflow: hidden;
+  position: relative;
+  transition: var(--main-transition);
+}
+.articles .container .box:hover {
+  transform: translateY(-10px);
+}
+
+.articles .container .box:hover .info i {
+  animation: left-right 0.5s linear infinite;
+}
+
+@keyframes left-right {
+  100% {
+    right: 5px;
+  }
+}
+
+.box img {
+  width: 100%;
+}
+.articles .box .content {
+  padding: 20px 10px;
+  border-bottom: 1px solid #e6e6e7;
+}
+
+.articles .box .content p {
+  margin-top: 10px;
+  line-height: 1.8;
+}
+.articles .box .info {
+  padding: 20px;
+  color: var(--main-color);
+  position: relative;
+}
+
+.articles .box .info i {
+  position: absolute;
+  right: 15px;
+  transform: translateY(5px);
+  font-size: 13px;
+}
+
+.articles .box .info a {
+  color: var(--main-color);
+}
