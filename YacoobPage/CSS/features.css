@@ -1,3 +1,129 @@
 .features .container {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
+.features .img-holder {
+  position: relative;
+}
+
+.features .img-holder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.features .quality .img-holder::before {
+  background-color: rgba(244, 64, 54, 0.6);
+}
+
+.features .time .img-holder::before {
+  background-color: rgb(0 150 136 / 60%);
+}
+.features .passion .img-holder::before {
+  background-color: rgb(3 169 244 / 60%);
+}
+
+.features > div p {
+  color: #777;
+  padding: 0 10px;
+}
+
+.features a {
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 0px 25px;
+  margin: 20px 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.features a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.features .quality a {
+  color: #f44036;
+  border: 3px solid #f44036;
+  display: inline-block;
+}
+.features .quality a::before {
+  background-color: #f44036;
+}
+
+.features .time a {
+  color: #009688;
+  border: 3px solid #009688;
+  display: inline-block;
+}
+
+.features .time a::before {
+  background-color: #009688;
+}
+
+.features .passion a {
+  color: #03a9f4;
+  border: 3px solid #03a9f4;
+  display: inline-block;
+}
+.features .passion a::before {
+  background-color: #03a9f4;
+}
+
+.features .container > div:hover a::before {
+  left: 0;
+  z-index: -10;
+}
+.features .container > div:hover a {
+  color: white;
+}
+.quality,
+.time,
+.passion {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features > div {
+  display: flex;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 22px;
+}
+
+.features > div h2 {
+  margin-bottom: 30px;
+  position: relative;
+  width: fit-content;
+}
+
+.features > div h2::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: calc(100% - 20px);
+  bottom: 0;
+  left: 10px;
+}
+
+.features .quality h2::after {
+  background-color: #f44036;
+}
+
+.features .time h2::after {
+  background-color: #009688;
+}
+
+.features .passion h2::after {
+  background-color: #03a9f4;
+}

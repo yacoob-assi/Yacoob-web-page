@@ -1,0 +1,44 @@
+.testimonials {
+  background-color: #ececec;
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+.testimonials .container {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.testimonials .box {
+  padding: 20px;
+  line-height: 1.7;
+  color: #777;
+  position: relative;
+  overflow: visible;
+  background-color: white;
+}
+
+.testimonials .box .rate {
+  padding: 5px;
+}
+
+.testimonials .box i:not(i:last-child) {
+  color: #ffc107;
+}
+
+.testimonials .box:nth-of-type(4) .rate i:last-child {
+  color: #ffc107;
+}
+
+.testimonials .box:nth-of-type(5) .rate i:nth-child(4),
+.testimonials .box:nth-of-type(6) .rate i:nth-child(4) {
+  color: #777;
+}
+
+.testimonials .box img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  border: 10px solid #ececec;
+}

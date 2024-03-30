@@ -1,0 +1,81 @@
+.team .box {
+  position: relative;
+  border-radius: 15px;
+  background-color: #f3f3f3;
+  height: 550px;
+  box-shadow: none;
+  overflow: visible;
+}
+.team .box::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #e4e4e4;
+  opacity: 0;
+  transition: var(--main-transition);
+  border-radius: 15px;
+}
+
+.team .box:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.team .container {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 70px;
+  padding-left: 60px;
+}
+
+.team .box .data .social {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+
+.team .box .data .social i {
+  padding: 10px;
+  color: #777;
+}
+
+.team .box .data .social i:hover {
+  color: var(--main-color);
+}
+
+.team .box img {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-55%);
+  z-index: 10;
+  border-radius: 15px;
+  transition: var(--main-transition);
+}
+
+.team .info {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+
+.team .info h3 {
+  color: var(--main-color);
+}
+
+.team .info p {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.team .box:hover img {
+  filter: grayscale(100%);
+}

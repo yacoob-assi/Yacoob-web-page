@@ -1,11 +1,15 @@
 .articles,
 .gallery,
-.features {
+.features,
+.testimonials,
+.team {
   padding-top: 100px;
 }
 .articles .container,
 .gallery .container,
-.features .container {
+.features .container,
+.testimonials .container,
+.team .container {
   margin-top: 60px;
   position: relative;
   display: grid;
