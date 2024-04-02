@@ -1,0 +1,140 @@
+.events {
+  position: relative;
+  overflow: hidden;
+}
+.events .container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+}
+
+.events .info {
+  text-align: center;
+  flex: 1;
+}
+.events .container .time {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.events .container .time .unit {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 60px;
+  margin-bottom: 30px;
+}
+
+.events .container .time .unit span {
+  border: 1px solid #ccc;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.events .container .time .unit:hover span {
+  border-color: var(--main-color);
+}
+
+.events .container .time .unit span:first-child {
+  color: var(--main-color);
+  font-size: 25px;
+  font-weight: bold;
+  height: 150px;
+}
+
+.events .container .time .unit span:nth-child(2) {
+  font-size: 14px;
+  color: #555;
+}
+.events img {
+  width: 350px;
+}
+
+.events .info p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.events .subscribe {
+  background-color: #f6f5f5;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto 0;
+  padding: 20px;
+}
+
+.events .subscribe input:first-child {
+  border: none;
+  padding: 20px 10px;
+  border-radius: 20px;
+  outline: none;
+  width: 400px;
+  margin-right: 20px;
+  caret-color: var(--main-color);
+}
+.events .subscribe input:last-child {
+  padding: 10px;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .events img {
+    display: none;
+  }
+  .events .info {
+    width: 100%;
+    flex: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .events .subscribe {
+    border-radius: 0;
+    width: 80%;
+    display: block;
+  }
+
+  .events .subscribe input:first-child {
+    margin-bottom: 10px;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .events .subscribe input:last-child {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .events .dots-up {
+    top: -60px;
+  }
+}
+
+.events .dots-up,
+.events .dots-down {
+  width: 200px;
+  height: 200px;
+  background-image: url(../imgs/dots.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+.events .dots-up {
+  position: absolute;
+  right: 0;
+}
+
+.events .dots-down {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

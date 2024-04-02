@@ -1,0 +1,79 @@
+.stats {
+  position: relative;
+  background-image: url(../imgs/stats.jpg);
+  background-size: cover;
+  min-height: 300px;
+  margin-top: 100px;
+  padding: 100px 0;
+  z-index: 1;
+  text-align: center;
+}
+
+.stats .container {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stats .container .box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  gap: 15px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.stats .container .box::after,
+.stats .container .box::before {
+  content: "";
+  width: 3px;
+  height: 0px;
+  background-color: var(--main-color);
+  position: absolute;
+  transition: 0.5s;
+}
+.stats .box::after {
+  top: 0;
+  right: 0;
+}
+
+.stats .box::before {
+  bottom: 0;
+  left: 0;
+}
+
+.stats .box:hover::before,
+.stats .box:hover::after {
+  height: 100%;
+}
+
+.stats .container .box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.stats .container .box .number {
+  font-size: 30px;
+  font-weight: bold;
+}
+.stats .container .box .text {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.stats::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(255 255 255 / 95%);
+  z-index: -1;
+}

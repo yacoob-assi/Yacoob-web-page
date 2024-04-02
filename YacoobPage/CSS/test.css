@@ -1,7 +1,5 @@
 .testimonials {
   background-color: #ececec;
-  margin-top: 100px;
-  padding-bottom: 100px;
 }
 .testimonials .container {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

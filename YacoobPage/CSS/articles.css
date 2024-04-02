@@ -1,16 +1,12 @@
-.articles,
-.gallery,
-.features,
-.testimonials,
-.team {
-  padding-top: 100px;
-}
 .articles .container,
 .gallery .container,
 .features .container,
 .testimonials .container,
-.team .container {
-  margin-top: 60px;
+.team .container,
+.services .container,
+.stats .container,
+.footer .container,
+.footer-gallery {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -22,13 +18,14 @@
   display: block;
   padding: 10px 15px;
   width: fit-content;
-  margin: auto;
   border: 2px solid black;
   font-size: 30px;
   text-transform: uppercase;
   position: relative;
   transition: var(--main-transition);
   z-index: 10;
+  top: 50px;
+  margin: 100px auto;
 }
 
 .main-title:hover {
